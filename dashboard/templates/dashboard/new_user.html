@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %} Team Member {% endblock %}
+{% block content  %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Request</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>City</th>
+                            <th>Phone</th>
+                            <th>Job Type</th>
+                            <th>eye</th>
+                            <th style="color: red;">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if member %}
+                            {% for i in member reversed %}
+                                <tr>
+                                    <td>{{i.fullname}}</td>
+                                    <td>{{ i.email }}</td>
+                                    <td>{{ i.city }}</td>
+                                    <td>{{ i.phone }}</td>
+                                    {% if i.jobtype == 'Internship' %}
+                                    <td><label class="badge badge-info">{{i.jobtype}}</label></td>
+                                    {% else %}
+                                    <td><label class="badge badge-danger">{{i.jobtype}}</label></td>
+                                    {% endif %}
+                                    <td><a href="{% url 'userdetails' i.id %}" type="button" class="btn btn-inverse-primary btn-fw">Details</a></td>
+                                    <td><a href="{% url 'removeuser' i.id %}" type="button" class="btn btn-inverse-danger btn-fw">X</a></td>
+                                </tr>
+                            {% endfor %}
+                        {% else %}
+                            <p style="color:red;"><strong>No data</strong></p>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

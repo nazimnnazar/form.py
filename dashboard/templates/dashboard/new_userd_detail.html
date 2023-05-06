@@ -1,0 +1,158 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %} {{ud.fullname}} Detail {% endblock %}
+{% block content  %}
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-7 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title mb-0">Top Products</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Field</th>
+                                        <th>Details</th>
+                                    </tr>  
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td class="font-weight-bold">Full Name</td>
+                                        <td style="color: rgb(49, 149, 243);font-size: 15px;"><strong>{{ ud.fullname }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td class="font-weight-bold">Email</td>
+                                        <td style="color: rgb(0, 0, 0);font-size: 15px;"><strong>{{ ud.email }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="font-weight-bold">Phone Number</td>
+                                        <td style="color: rgb(19, 17, 19);font-size: 15px;"><strong>{{ ud.phone }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td class="font-weight-bold">State</td>
+                                        <td style="color: rgb(20, 2, 2);font-size: 15px;"><strong>{{ ud.state }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td class="font-weight-bold">City</td>
+                                        <td style="color: rgb(22, 22, 22);font-size: 15px;"><strong>{{ ud.city }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td class="font-weight-bold">Gender</td>
+                                        <td style="color: rgb(17, 1, 1);font-size: 15px;"><strong>{{ ud.gender }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td class="font-weight-bold">Education</td>
+                                        <td style="color: rgb(26, 1, 1);font-size: 15px;"><strong>{{ ud.education }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td class="font-weight-bold">Job Type</td>
+                                        <td style="color: rgb(27, 26, 26);font-size: 15px;"><strong>{{ ud.jobtype }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="font-weight-bold">Frameworks</td>
+                                        <td style="color: rgb(14, 13, 13);font-size: 15px;"><strong>{{ ud.frameworks }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td class="font-weight-bold">Languages</td>
+                                        <td style="color: rgb(2, 2, 2);font-size: 15px;"><strong>{{ ud.languages }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12</td>
+                                        <td class="font-weight-bold">Database</td>
+                                        <td style="color: rgb(15, 1, 1);font-size: 15px;"><strong>{{ ud.database }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13</td>
+                                        <td class="font-weight-bold">Libraries</td>
+                                        <td style="color: rgb(0, 0, 0);font-size: 15px;"><strong>{{ ud.libraries }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14</td>
+                                        <td class="font-weight-bold">Other Skill</td>
+                                        <td style="color: rgb(27, 26, 26);font-size: 15px;"><strong>{{ ud.other }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>15</td>
+                                        <td class="font-weight-bold">Fresher or Experiance</td>
+                                        <td style="color: rgb(27, 26, 26);font-size: 15px;"><strong>{{ ud.fresher_or_Experiance }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>16</td>
+                                        <td class="font-weight-bold">Salary</td>
+                                        <td style="color: rgb(27, 26, 26);font-size: 15px;"><strong>{{ ud.salary }}</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>17</td>
+                                        <td class="font-weight-bold">Date Of Birth</td>
+                                        <td style="color: rgb(27, 26, 26);font-size: 15px;"><strong>{{ ud.birth }}</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 ">
+                <div class="card">
+                    <div class="card-body"> 
+                        <p style="font-size: 15px;">Download <strong style="color: rgb(58, 4, 119);">Resume</strong></p>
+                        <div class="row">
+                            <div class="col-sm"></div>
+                            <div class="col-sm">
+                                <button type="button" class="btn btn-primary btn-icon-text"><i class="ti-file btn-icon-prepend"></i>Download</button>
+                            </div>
+                            <div class="col-sm"></div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body"> 
+                        <p style="font-size: 15px;">Do you want To <strong style="color: red;">Delete </strong>this User Profile?</p>
+                        <div class="row">
+                            <div class="col-sm"></div>
+                            <div class="col-sm">
+                                <a href="" type="button" class="btn btn-danger btn-rounded btn-fw">Delete</a>
+                            </div>
+                            <div class="col-sm"></div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body"> 
+                        <p style="font-size: 15px;">Update  <strong style="color: rgb(209, 207, 55);">User </strong></p>
+                        <div class="row">
+                            <div class="col-sm"></div>
+                            <div class="col-sm">
+                                <button type="button" class="btn btn-warning btn-icon-text"><i class="ti-reload btn-icon-prepend"></i>Update</button>
+                            </div>
+                            <div class="col-sm"></div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <p style="font-size: 15px;"><strong style="color: rgb(209, 1, 29);">User About</strong></p>
+                        {{ ud.selfintro }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
